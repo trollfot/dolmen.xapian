@@ -1,0 +1,42 @@
+Changes
+-------
+0.5.0 - November 11th, 2008
+
+- add extensive optional logging options
+
+- don't let a bad op kill the indexing thread
+ 
+- log if an object can't be resolved
+
+- enable synchronous mode for integration testing
+
+- allow for multiple zcml defs for a queue processor
+
+0.4.2 - May 2nd, 2008
+
+- add license headers
+
+0.4.1 - May 1st, 2008
+=====================
+
+- packaging fix, not a zip safe package (includes zcml)
+
+0.4 - April 30th, 2008 
+======================
+
+- transactional operation buffer for feeding into operation queue.
+  also performs aggregation of operations for a given piece of
+  content within a transaction scope.
+
+- zcml support for starting an indexer
+ 
+- additional test coverage and bug fixes
+
+- rename flush timeout to poll timeout on queue processor.
+
+- transaction package dependency
+
+0.3 - February 10th, 2008 
+=========================
+
+First Release
