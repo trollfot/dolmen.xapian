@@ -19,10 +19,8 @@
 $Id: $
 """
 
-import Queue, threading, time
-
+import Queue, threading
 from logging import getLogger
-
 from dolmen.xapian import interfaces
 
 # we do async indexing with all indexing operations put into this queue

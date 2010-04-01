@@ -6,16 +6,18 @@ def read(*rnames):
     
 setup(
     name="dolmen.xapian",
-    version="0.1",
+    version="0.1.1",
     install_requires=[
         'setuptools',
         'xappy',
         'transaction',
         'grokcore.component',
         'zope.schema',
-        'zope.site',
         'zope.component',
         'zope.container',
+        'zope.i18nmessageid',
+        'zope.interface',
+        'zope.security',
         'zope.lifecycleevent'],
     packages=find_packages('src'),
     package_dir= {'':'src'},

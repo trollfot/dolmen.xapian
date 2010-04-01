@@ -5,8 +5,8 @@ import time
 import xappy
 
 from threading import local
-from zope import component, interface
-from dolmen.xapian.interfaces import IResolver, IIndexSearch
+from zope import interface
+from dolmen.xapian.interfaces import IIndexSearch
 
 log = logging.getLogger('dolmen.xapian')
 
@@ -65,16 +65,3 @@ class IndexSearch(object):
 
     def invalidate(self):
         self.hub.invalidate()
-
-
-def object_resolver(self):
-    """Rather than rewrapping results one by one,
-    and increasing memory usage, just attach a resolving
-    method onto search results.
-    """
-    resolver_id = self.data['resolver'][0]
-    resolver = component.getUtility(IResolver, resolver_id)
-    return resolver.resolve(self.id)
-
-
-xappy.searchconnection.SearchResult.object = object_resolver

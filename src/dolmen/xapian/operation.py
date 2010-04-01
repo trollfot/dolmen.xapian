@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 
-from zope import component, interface
-import grokcore.component as grok
-
 import transaction
 import threading
 import xappy
 import interfaces
 import queue
 import logging
+
+from zope import interface
+import grokcore.component as grok
+from dolmen.xapian.interfaces import (
+    IIndexOperation, IResolver, IAddOperation)
+from zope.component import getUtility
+
 
 log = logging.getLogger('dolmen.xapian')
 

@@ -1,6 +1,6 @@
-----------
+=============
 dolmen.xapian
-----------
+=============
 
 The package provides a content indexing framework for a multi-threaded
 python application. It utilizes xapian for its indexing library, and the
